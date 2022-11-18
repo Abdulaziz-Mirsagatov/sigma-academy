@@ -1,0 +1,42 @@
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1E1E1E;
+}
+header a:hover {
+  background-color: #DFAA0C;
+  color: #1E1E1E;
+}
+header .logo {
+  width: 120px;
+  margin-left: 3em;
+  cursor: pointer;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+header nav li {
+  list-style: none;
+}
+header nav a {
+  display: block;
+  text-decoration: none;
+  color: #DFAA0C;
+  font-size: 150%;
+  padding: 1.2em 1.2em;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+main {
+  height: 100%;
+}

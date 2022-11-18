@@ -1,0 +1,191 @@
+// variables
+$primary-color: #DFAA0C;
+$secondary-color: #1E1E1E;
+
+.wrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $secondary-color;
+
+    .logo{
+        width: 8em;
+        margin-left: 3em;
+    }
+
+    nav{
+        > ul {
+            display: flex;
+            align-items: center;
+    
+            a{
+                display: block;
+                text-decoration: none;
+                color: $primary-color;
+                font-size: 150%;
+                padding: 1.2em;
+                transition: background-color 0.3s, color 0.3s;
+            }
+
+            a:hover{
+                background-color: $primary-color;
+                color: $secondary-color;
+            }
+
+            a.active{
+                background-color: $primary-color;
+                color: $secondary-color;
+            }
+        }
+
+        li{
+            list-style: none;
+
+            a{
+                text-decoration: none;
+                color: $primary-color;
+            }
+        }
+
+        .menu{
+            position: fixed;
+            background-color: $secondary-color;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 50;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transform: translateY(-100%);
+            transition: transform 0.5s;
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                height: 30%;
+                font-size: 2em;
+                font-weight: bold;
+            }
+        }
+
+        .menu.active{
+            transform: translateY(0);
+        }
+
+    }
+}
+
+@keyframes moving-image {
+    from{
+        background-size: 130%;
+    }
+    to{
+        background-size: 100%;
+    }
+}
+
+@keyframes floating-animation {
+    from{
+        transform: translateY(5%);
+        opacity: 0;
+    }
+}
+
+@keyframes footer-animation {
+    from{
+        gap: 10em;
+    }
+    to{
+        gap: 0;
+    }
+}
+
+@keyframes div-animation {
+    from{
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header{
+        .logo{
+            width: 5em;
+            margin-left: 1em;
+        }
+
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1em;
+            margin-right: 1em;
+
+            > ul {
+                a:not(.active){
+                    display: none;
+                }
+
+                a{
+                    font-size: 1.2em;
+                    padding: 1em 0;
+                }
+
+                a.active{
+                    background-color: $secondary-color;
+                    color: $primary-color;
+                }
+            }
+
+            .vertical-line{
+                width: 3px;
+                height: 2em;
+                background-color: $primary-color;
+                border-radius: 3px;
+            }
+            
+            .hamburger{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 2.2em;
+                height: 25px;
+                cursor: pointer;
+                z-index: 100;
+        
+                .bar{
+                    width: 100%;
+                    height: 5px;
+                    border-radius: 3px;
+                    background-color: $primary-color;
+                    transition: transform 0.3s, opacity 0.3s;
+                }
+            }
+
+            .hamburger.active{
+                .bar:nth-child(1){
+                    transform: rotate(-45deg) translate(-6px, 8px);
+                }  
+                
+                .bar:nth-child(2){
+                    opacity: 0;
+                }
+
+                .bar:nth-child(3){
+                    transform: rotate(45deg) translate(-6px, -8px);
+                }  
+            }
+        }
+
+    }
+}

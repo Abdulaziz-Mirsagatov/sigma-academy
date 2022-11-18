@@ -1,0 +1,215 @@
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1E1E1E;
+}
+header .logo {
+  width: 8em;
+  margin-left: 3em;
+}
+header nav > ul {
+  display: flex;
+  align-items: center;
+}
+header nav > ul a {
+  display: block;
+  text-decoration: none;
+  color: #DFAA0C;
+  font-size: 150%;
+  padding: 1.2em;
+  transition: background-color 0.3s, color 0.3s;
+}
+header nav > ul a:hover {
+  background-color: #DFAA0C;
+  color: #1E1E1E;
+}
+header nav > ul a.active {
+  background-color: #DFAA0C;
+  color: #1E1E1E;
+}
+header nav li {
+  list-style: none;
+}
+header nav li a {
+  text-decoration: none;
+  color: #DFAA0C;
+}
+header nav .menu {
+  position: fixed;
+  background-color: #1E1E1E;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateY(-100%);
+  transition: transform 0.5s;
+}
+header nav .menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 30%;
+  font-size: 2em;
+  font-weight: bold;
+}
+header nav .menu.active {
+  transform: translateY(0);
+}
+
+@keyframes moving-image {
+  from {
+    background-size: 130%;
+  }
+  to {
+    background-size: 100%;
+  }
+}
+@keyframes floating-animation {
+  from {
+    transform: translateY(5%);
+    opacity: 0;
+  }
+}
+@keyframes footer-animation {
+  from {
+    gap: 10em;
+  }
+  to {
+    gap: 0;
+  }
+}
+@keyframes div-animation {
+  from {
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  header .logo {
+    width: 5em;
+    margin-left: 1em;
+  }
+  header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    margin-right: 1em;
+  }
+  header nav > ul a:not(.active) {
+    display: none;
+  }
+  header nav > ul a {
+    font-size: 1.2em;
+    padding: 1em 0;
+  }
+  header nav > ul a.active {
+    background-color: #1E1E1E;
+    color: #DFAA0C;
+  }
+  header nav .vertical-line {
+    width: 3px;
+    height: 2em;
+    background-color: #DFAA0C;
+    border-radius: 3px;
+  }
+  header nav .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.2em;
+    height: 25px;
+    cursor: pointer;
+    z-index: 100;
+  }
+  header nav .hamburger .bar {
+    width: 100%;
+    height: 5px;
+    border-radius: 3px;
+    background-color: #DFAA0C;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  header nav .hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-6px, 8px);
+  }
+  header nav .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  header nav .hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-6px, -8px);
+  }
+}
+main .title {
+  font-size: 2.5em;
+  color: #DFAA0C;
+  text-align: center;
+  margin-top: 1em;
+}
+main .tutors-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  margin: 2em 0;
+  animation-name: floating-animation;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+main .tutors-container .tutor-container {
+  display: flex;
+  gap: 1em;
+  padding: 1em 2em;
+  width: 45em;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px #1E1E1E;
+}
+main .tutors-container .tutor-container h1 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+main .tutors-container .tutor-container p {
+  font-size: 1.2em;
+  text-align: justify;
+}
+main .tutors-container .tutor-container .tutor-image {
+  width: 12em;
+}
+
+@media screen and (max-width: 480px) {
+  main .title {
+    font-size: 1.6em;
+  }
+  main .tutors-container {
+    gap: 1em;
+  }
+  main .tutors-container .tutor-container {
+    flex-direction: column;
+    gap: 0.5em;
+    width: 80%;
+    padding: 0.5em 1em;
+  }
+  main .tutors-container .tutor-container h1 {
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+  main .tutors-container .tutor-container p {
+    font-size: 1em;
+  }
+  main .tutors-container .tutor-container .tutor-image {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
