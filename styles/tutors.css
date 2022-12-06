@@ -53,7 +53,7 @@ header nav .menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transform: translateY(-100%);
+  transform: translateX(100%);
   transition: transform 0.5s;
 }
 header nav .menu ul {
@@ -66,7 +66,7 @@ header nav .menu ul {
   font-weight: bold;
 }
 header nav .menu.active {
-  transform: translateY(0);
+  transform: translateX(0);
 }
 
 @keyframes moving-image {
