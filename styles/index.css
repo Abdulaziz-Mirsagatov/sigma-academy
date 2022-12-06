@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
 .wrapper {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: "Raleway", sans-serif;
 }
 
 header {
@@ -18,6 +21,7 @@ header .logo {
 header nav > ul {
   display: flex;
   align-items: center;
+  font-family: "Comfortaa", cursive;
 }
 header nav > ul a {
   display: block;
@@ -176,6 +180,7 @@ main .overlay {
 main .container {
   margin-left: 10em;
   max-width: 80%;
+  line-height: 1.2;
 }
 main .container h1, main .container h2, main .container p {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -193,6 +198,7 @@ main .container h1 {
   color: #DFAA0C;
   font-size: 4em;
   margin-bottom: 0.3em;
+  font-family: "Comfortaa", cursive;
 }
 
 @media screen and (max-width: 480px) {

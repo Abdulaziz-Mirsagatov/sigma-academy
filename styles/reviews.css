@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
 .wrapper {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: "Raleway", sans-serif;
 }
 
 header {
@@ -18,6 +21,7 @@ header .logo {
 header nav > ul {
   display: flex;
   align-items: center;
+  font-family: "Comfortaa", cursive;
 }
 header nav > ul a {
   display: block;

@@ -1,12 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 // variables
 $primary-color: #DFAA0C;
 $secondary-color: #1E1E1E;
+$primary-font: 'Comfortaa', cursive;
+$secondary-font: 'Raleway', sans-serif;
 
 .wrapper{
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-family: $secondary-font;
 }
 
 header{
@@ -24,6 +29,7 @@ header{
         > ul {
             display: flex;
             align-items: center;
+            font-family: $primary-font;
     
             a{
                 display: block;
