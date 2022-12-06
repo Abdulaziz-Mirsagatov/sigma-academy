@@ -161,36 +161,59 @@ main .title {
   text-align: center;
   margin-top: 1em;
 }
-main form {
+main .social-media-container {
+  width: min(45em, 90%);
+  margin: 2em auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   gap: 1em;
-  margin: 1em auto;
-  width: 40em;
 }
-main form input, main form textarea {
-  padding: 1em;
-  border: 1px solid gray;
-  border-radius: 5px;
-  font-size: 1em;
+main .social-media-container img {
+  width: 4em;
+  margin-right: 1em;
 }
-main form textarea {
-  font-size: 1.2em;
+main .social-media-container a {
+  text-decoration: none;
+  width: 100%;
 }
-main form input[type=submit] {
-  width: 8em;
-  padding: 0.5em 0;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #DFAA0C;
-  background-color: #fff;
-  transition: background-color 0.3s, color 0.3s;
+main .social-media-container div {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 2em;
 }
-main form input[type=submit]:hover {
+main .social-media-container h2 {
+  font-size: 2em;
+}
+main .social-media-container .telegram-container {
+  background-color: #30baee;
   color: #fff;
-  background-color: #DFAA0C;
-  box-shadow: 0 0 10px #DFAA0C;
-  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+main .social-media-container .instagram-container {
+  background-color: #d94b76;
+  color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+main .social-media-container .tiktok-container {
+  background-color: #212121;
+  color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+main .social-media-container .telegram-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0px 20px #30baee;
+}
+main .social-media-container .instagram-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px #d94b76;
+}
+main .social-media-container .tiktok-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px #212121;
 }
 
 footer {
@@ -220,21 +243,23 @@ footer div a {
     font-size: 1.6em;
     margin-top: 0.5em;
   }
-  main form {
+  main .social-media-container {
     gap: 0.5em;
-    width: 90%;
+    margin-top: 1em;
   }
-  main form input, main form textarea {
-    padding: 0.5em;
-    font-size: 0.8em;
+  main .social-media-container img {
+    width: 2.5em;
   }
-  main form textarea {
-    font-size: 1em;
+  main .social-media-container div {
+    border-radius: 5px;
+    padding: 0.5em 1em;
   }
-  main form input[type=submit] {
-    width: 5em;
-    padding: 0.3em 0;
-    font-size: 1em;
+  main .social-media-container h2 {
+    font-size: 1.2em;
+  }
+  main .social-media-container .telegram-container:hover, main .social-media-container .instagram-container:hover, main .social-media-container .tiktok-container:hover {
+    box-shadow: none;
+    transform: scale(1);
   }
   footer {
     flex-direction: column;

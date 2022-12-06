@@ -11,39 +11,68 @@ main{
         margin-top: 1em;
     }
 
-    form{
+    .social-media-container{
+        width: min(45em, 90%);
+        margin: 2em auto;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
         gap: 1em;
-        margin: 1em auto;
-        width: 40em;
 
-        input, textarea{
-            padding: 1em;
-            border: 1px solid gray;
-            border-radius: 5px;
-            font-size: 1em;
+        img{
+            width: 4em;
+            margin-right: 1em;
         }
 
-        textarea{
-            font-size: 1.2em;
+        a{
+            text-decoration: none;
+            width: 100%;
         }
 
-        input[type="submit"]{
-            width: 8em;
-            padding: 0.5em 0;
-            font-size: 1.2em;
-            font-weight: bold;
-            color: base.$primary-color;
-            background-color: #fff;
-            transition: background-color 0.3s, color 0.3s;
+        div{
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1em 2em;
         }
 
-        input[type="submit"]:hover{
+        h2{
+            font-size: 2em;
+        }
+
+        .telegram-container{
+            background-color: #30baee;
             color: #fff;
-            background-color: base.$primary-color;
-            box-shadow: 0 0 10px base.$primary-color;
-            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .instagram-container{
+            background-color: #d94b76;
+            color: #fff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .tiktok-container{
+            background-color: #212121;
+            color: #fff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .telegram-container:hover{
+            transform: scale(1.02);
+            box-shadow: 0 0px 20px #30baee;
+        }
+
+        .instagram-container:hover{
+            transform: scale(1.02);
+            box-shadow: 0 0 20px #d94b76;
+        }
+
+        .tiktok-container:hover{
+            transform: scale(1.02);
+            box-shadow: 0 0 20px #212121;
         }
     }
 }
@@ -86,23 +115,26 @@ footer{
             margin-top: 0.5em;
         }
 
-        form{
+        .social-media-container{
             gap: 0.5em;
-            width: 90%;
-
-            input, textarea{
-                padding: 0.5em;
-                font-size: 0.8em;
+            margin-top: 1em;
+    
+            img{
+                width: 2.5em;
+            }
+    
+            div{
+                border-radius: 5px;
+                padding: 0.5em 1em;
+            }
+    
+            h2{
+                font-size: 1.2em;
             }
 
-            textarea{
-                font-size: 1em;
-            }
-
-            input[type="submit"]{
-                width: 5em;
-                padding: 0.3em 0;
-                font-size: 1em;
+            .telegram-container:hover, .instagram-container:hover, .tiktok-container:hover{
+                box-shadow: none;
+                transform: scale(1);
             }
         }
     }
