@@ -203,12 +203,12 @@ main .container h1 {
     margin: 0 auto;
   }
   main .container h2 {
-    font-size: 1.2em;
+    font-size: 1em;
   }
   main .container p {
     font-size: 1em;
   }
   main .container h1 {
-    font-size: 2.5em;
+    font-size: 2.2em;
   }
 }
